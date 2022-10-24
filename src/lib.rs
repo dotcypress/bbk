@@ -2,6 +2,7 @@
 
 use hal::analog::adc;
 use hal::gpio::SignalEdge;
+use hal::power::WakeUp;
 use hal::rcc::{self, PllConfig};
 use hal::spi;
 use hal::stm32::*;
@@ -42,6 +43,7 @@ impl Platform {
     #[allow(clippy::too_many_arguments)]
     pub fn new(
         rcc: RCC,
+        pwr: PWR,
         exti: EXTI,
         adc: ADC,
         gpioa: GPIOA,
@@ -65,7 +67,6 @@ impl Platform {
         let mut exti = exti;
         let standby = pins.standby;
         let wakeup = pins.wakeup_button.listen(SignalEdge::Falling, &mut exti);
-        exti.wakeup(hal::exti::Event::GPIO1);
 
         let i2c = i2c_dev.i2c(pins.i2c_sda, pins.i2c_clk, i2c_config, &mut rcc);
 
@@ -100,6 +101,10 @@ impl Platform {
             pins.motor_b_phase,
             &mut rcc,
         );
+
+        let mut pwr = pwr.constrain(&mut rcc);
+        pwr.clear_standby_flag();
+        pwr.enable_wakeup_lane(WakeUp::Line1, SignalEdge::Falling);
 
         Self {
             adc,
