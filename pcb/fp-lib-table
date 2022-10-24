@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "#bbk")(type "KiCad")(uri "/Users/dotcypress/projects/embedded/bbk/pcb")(options "")(descr ""))
+)
