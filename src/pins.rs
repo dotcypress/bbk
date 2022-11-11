@@ -3,6 +3,7 @@ use hal::gpio::*;
 use hal::prelude::*;
 use hal::rcc::Rcc;
 use hal::stm32::*;
+use crate::*;
 
 // Qwiic I2C
 pub type I2cClk = PB8<Output<OpenDrain>>;
@@ -16,13 +17,13 @@ pub type IrRx = PC15<Input<Floating>>;
 pub type Neopixel = PA2<DefaultMode>;
 
 // Power management
-pub type Standby = PA1<Output<PushPull>>;
+pub type Standby = PA6<Output<PushPull>>;
 pub type BatterySense = PA3<DefaultMode>;
 
 // Motor control
 pub type MotorDriverTork = PB6<DefaultMode>;
 pub type MotorDriverEnable = PA5<Output<PushPull>>;
-pub type MotorDriverFault = PA6<Input<Floating>>;
+pub type MotorDriverFault = PA1<Input<Floating>>;
 pub type MotorAPwm = PA11<DefaultMode>;
 pub type MotorBPwm = PA8<DefaultMode>;
 pub type MotorAPhase = PA12<Output<PushPull>>;
@@ -87,13 +88,13 @@ impl Pins {
             neopixel: port_a.pa2,
 
             // Power management
-            standby: port_a.pa1.into(),
+            standby: port_a.pa6.into(),
             battery_sense: port_a.pa3,
 
             // Motor control
             motor_driver_tork: port_b.pb6,
             motor_driver_enable: port_a.pa5.into(),
-            motor_driver_fault: port_a.pa6.into(),
+            motor_driver_fault: port_a.pa1.into(),
             motor_a_pwm: port_a.pa11,
             motor_b_pwm: port_a.pa8,
             motor_a_phase: port_a.pa12.into(),

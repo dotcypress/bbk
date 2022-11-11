@@ -1,5 +1,3 @@
-#![allow(dead_code)]
-
 use hal::rcc::Rcc;
 use hal::timer::pwm::*;
 use hal::timer::*;
@@ -7,13 +5,14 @@ use hal::timer::*;
 use crate::*;
 
 pub struct MotorControl {
-    enable: MotorDriverEnable,
-    fault: MotorDriverFault,
-    tork: PwmPin<TIM16, Channel1>,
-    pwm_a: PwmPin<TIM1, Channel4>,
-    pwm_b: PwmPin<TIM1, Channel1>,
-    phase_a: MotorAPhase,
-    phase_b: MotorBPhase,
+    pub enable: MotorDriverEnable,
+    pub fault: MotorDriverFault,
+    pub tork: PwmPin<TIM16, Channel1>,
+    pub pwm_tim: Pwm<TIM1>,
+    pub pwm_a: PwmPin<TIM1, Channel4>,
+    pub pwm_b: PwmPin<TIM1, Channel1>,
+    pub phase_a: MotorAPhase,
+    pub phase_b: MotorBPhase,
 }
 
 impl MotorControl {
@@ -35,12 +34,14 @@ impl MotorControl {
         tork.set_duty(tork.get_max_duty());
         tork.enable();
 
-        let speed_pwm = speed_tim.pwm(100.Hz(), rcc);
-        let mut pwm_a = speed_pwm.bind_pin(pwm_a);
+        let mut pwm_tim = speed_tim.pwm(100.Hz(), rcc);
+        // pwm_tim.listen();
+
+        let mut pwm_a = pwm_tim.bind_pin(pwm_a);
         pwm_a.set_duty(0);
         pwm_a.enable();
 
-        let mut pwm_b = speed_pwm.bind_pin(pwm_b);
+        let mut pwm_b = pwm_tim.bind_pin(pwm_b);
         pwm_b.set_duty(0);
         pwm_b.enable();
 
@@ -48,6 +49,7 @@ impl MotorControl {
             tork,
             enable,
             fault,
+            pwm_tim,
             pwm_a,
             pwm_b,
             phase_a,

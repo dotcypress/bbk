@@ -1,27 +1,4 @@
-#![no_std]
-
-use hal::analog::adc;
-use hal::gpio::SignalEdge;
-use hal::power::WakeUp;
-use hal::rcc::{self, PllConfig};
-use hal::spi;
-use hal::stm32::*;
-use ws2812_spi as ws2812;
-
-pub extern crate stm32g0xx_hal as hal;
-
-mod ir;
-mod motor;
-mod pins;
-
-pub use hal::i2c;
-pub use hal::prelude::*;
-pub use hal::stm32;
-pub use infrared::*;
-pub use ir::*;
-pub use motor::*;
-pub use pins::*;
-pub use smart_leds::{SmartLedsWrite, RGB};
+use crate::*;
 
 pub type SpiDev = spi::Spi<hal::pac::SPI1, (spi::NoSck, spi::NoMiso, Neopixel)>;
 pub type I2cDev = hal::i2c::I2c<I2C1, I2cSda, I2cClk>;
@@ -66,28 +43,19 @@ impl Platform {
 
         let mut exti = exti;
         let standby = pins.standby;
-        let wakeup = pins.wakeup_button.listen(SignalEdge::Falling, &mut exti);
-
-        let i2c = i2c_dev.i2c(pins.i2c_sda, pins.i2c_clk, i2c_config, &mut rcc);
-
-        let spi = spi.spi(
-            (spi::NoSck, spi::NoMiso, pins.neopixel),
-            ws2812::MODE,
-            3.MHz(),
-            &mut rcc,
-        );
-        let neopixel = ws2812::Ws2812::new(spi);
+        let wakeup = pins.wakeup_button; //.listen(SignalEdge::Falling, &mut exti);
 
         let battery_sense = pins.battery_sense;
         let mut adc = adc.constrain(&mut rcc);
         adc.set_sample_time(adc::SampleTime::T_80);
         adc.set_precision(adc::Precision::B_12);
 
-        let mut ir_sample_tim = tim17.pwm(IR_SAMPLE_FREQUENCY.Hz(), &mut rcc);
-        ir_sample_tim.listen();
+        let mut ir_tim = tim17.pwm(IR_TIMER_FREQUENCY.Hz(), &mut rcc);
+        ir_tim.listen();
 
         let ir_carrier_tim = tim14.pwm(IR_CARRIER_FREQUENCY.Hz(), &mut rcc);
-        let ir = IrTransceiver::new(ir_sample_tim, ir_carrier_tim, pins.ir_tx, pins.ir_rx);
+        let rx = pins.ir_rx.listen(SignalEdge::All, &mut exti);
+        let ir = IrTransceiver::new(ir_tim, ir_carrier_tim, pins.ir_tx, rx);
 
         let esc = MotorControl::new(
             tim1,
@@ -105,6 +73,16 @@ impl Platform {
         let mut pwr = pwr.constrain(&mut rcc);
         pwr.clear_standby_flag();
         pwr.enable_wakeup_lane(WakeUp::Line1, SignalEdge::Falling);
+
+        let i2c = i2c_dev.i2c(pins.i2c_sda, pins.i2c_clk, i2c_config, &mut rcc);
+
+        let spi = spi.spi(
+            (spi::NoSck, spi::NoMiso, pins.neopixel),
+            ws2812::MODE,
+            3.MHz(),
+            &mut rcc,
+        );
+        let neopixel = ws2812::Ws2812::new(spi);
 
         Self {
             adc,
