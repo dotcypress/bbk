@@ -1,4 +1,4 @@
-(kicad_sch (version 20220929) (generator eeschema)
+(kicad_sch (version 20221004) (generator eeschema)
 
   (uuid e63e39d7-6ac0-4ffd-8aa3-1841a4541b55)
 
@@ -364,15 +364,15 @@
           (stroke (width 0.254) (type default))
           (fill (type background))
         )
-        (arc (start -8.89 -3.81) (mid -6.985 -5.715) (end -5.08 -3.81)
+        (arc (start -8.89 -3.81) (mid -6.985 -5.7067) (end -5.08 -3.81)
           (stroke (width 0.508) (type default))
           (fill (type none))
         )
-        (arc (start -7.62 -3.81) (mid -6.985 -4.445) (end -6.35 -3.81)
+        (arc (start -7.62 -3.81) (mid -6.985 -4.4423) (end -6.35 -3.81)
           (stroke (width 0.254) (type default))
           (fill (type none))
         )
-        (arc (start -7.62 -3.81) (mid -6.985 -4.445) (end -6.35 -3.81)
+        (arc (start -7.62 -3.81) (mid -6.985 -4.4423) (end -6.35 -3.81)
           (stroke (width 0.254) (type default))
           (fill (type outline))
         )
@@ -380,15 +380,15 @@
           (stroke (width 0.254) (type default))
           (fill (type outline))
         )
-        (arc (start -6.35 3.81) (mid -6.985 4.445) (end -7.62 3.81)
+        (arc (start -6.35 3.81) (mid -6.985 4.4423) (end -7.62 3.81)
           (stroke (width 0.254) (type default))
           (fill (type none))
         )
-        (arc (start -6.35 3.81) (mid -6.985 4.445) (end -7.62 3.81)
+        (arc (start -6.35 3.81) (mid -6.985 4.4423) (end -7.62 3.81)
           (stroke (width 0.254) (type default))
           (fill (type outline))
         )
-        (arc (start -5.08 3.81) (mid -6.985 5.715) (end -8.89 3.81)
+        (arc (start -5.08 3.81) (mid -6.985 5.7067) (end -8.89 3.81)
           (stroke (width 0.508) (type default))
           (fill (type none))
         )
@@ -2791,14 +2791,13 @@
   (symbol (lib_id "Device:R") (at 179.07 120.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 003b17b1-786f-4e88-8c9b-e617da0c101e)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 181.61 120.015 0)
+    (property "Reference" "R9" (at 181.61 120.015 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 181.61 122.555 0)
+    (property "Value" "10K" (at 181.61 122.555 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 177.292 120.65 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 177.292 120.65 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 179.07 120.65 0)
@@ -2806,19 +2805,25 @@
     )
     (pin "1" (uuid 24c204e0-57f1-4185-aa87-a928eeef488d))
     (pin "2" (uuid 296fa3b0-b1c9-4ee1-a4fe-0282882f3aaf))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R9") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Connector_Generic:Conn_01x02") (at 107.95 231.14 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 03b73d21-973e-4edb-875f-12d5123cbb36)
-    (default_instance (reference "J6") (unit 1) (value "Conn_01x02") (footprint ""))
-    (property "Reference" "J6" (at 110.49 230.505 0)
+    (property "Reference" "J3" (at 110.49 230.505 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "Conn_01x02" (at 110.49 227.965 0)
+    (property "Value" "ExtPower" (at 110.49 227.965 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 107.95 231.14 0)
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" (at 107.95 231.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 107.95 231.14 0)
@@ -2826,13 +2831,19 @@
     )
     (pin "1" (uuid 9aa3545a-5eea-461c-b30d-5fbf0c6cf822))
     (pin "2" (uuid 82b812c0-705b-44c8-a96f-f9e7f773f782))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "J3") (unit 1) (value "ExtPower") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 173.99 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 046cb66b-afb9-437b-87c9-71680c4260bc)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 173.99 78.74 0)
+    (property "Reference" "#PWR0128" (at 173.99 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 173.99 77.47 0)
@@ -2845,13 +2856,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid eb5c36fc-6c7c-4188-9f66-272faaf90cdd))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0128") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:+3.3V") (at 46.99 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 04b99168-74b3-451b-8d31-b9c942b90766)
-    (default_instance (reference "#PWR?") (unit 1) (value "+3.3V") (footprint ""))
-    (property "Reference" "#PWR?" (at 46.99 119.38 0)
+    (property "Reference" "#PWR0143" (at 46.99 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 46.99 111.76 0)
@@ -2864,13 +2881,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 885a0253-b830-4552-9808-d9148dc45832))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0143") (unit 1) (value "+3.3V") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 191.77 171.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1481b819-43e6-403f-b5ae-e3c37860020b)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 191.77 177.8 0)
+    (property "Reference" "#PWR0136" (at 191.77 177.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 191.77 176.53 0)
@@ -2883,13 +2906,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 35301ffc-6656-43b9-bd04-f5de35ef0749))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0136") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:C_Polarized") (at 290.83 91.44 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 17bd00b7-444c-48e6-ae0f-4ee88bfddd1c)
-    (default_instance (reference "C9") (unit 1) (value "22uF") (footprint "Capacitor_SMD:CP_Elec_4x4.5"))
-    (property "Reference" "C9" (at 292.1 88.9 0)
+    (property "Reference" "C11" (at 292.1 88.9 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "22uF" (at 292.1 93.98 0)
@@ -2903,13 +2932,19 @@
     )
     (pin "1" (uuid f4521e0b-6271-4a4d-bb54-7cb6c8eba4b2))
     (pin "2" (uuid 843a2a5e-1021-4a74-92d6-2f76f49b54ab))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "C11") (unit 1) (value "22uF") (footprint "Capacitor_SMD:CP_Elec_4x4.5")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 187.96 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 189d7cd1-072a-46d3-8378-b1fd816b3840)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 187.96 78.74 0)
+    (property "Reference" "#PWR0130" (at 187.96 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 187.96 77.47 0)
@@ -2922,19 +2957,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 934cced0-6e73-4df5-914f-622ddeb5cb59))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0130") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Connector_Generic:Conn_01x03") (at 144.78 53.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 18bdd46d-b182-415c-b46d-6d0c79a961de)
-    (default_instance (reference "J5") (unit 1) (value "Conn_01x03") (footprint ""))
     (property "Reference" "J5" (at 143.51 48.26 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "Conn_01x03" (at 140.97 59.69 0)
+    (property "Value" "Li-Ion" (at 140.97 59.69 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 144.78 53.34 0)
+    (property "Footprint" "Connector_JST:JST_SH_BM03B-SRSS-TB_1x03-1MP_P1.00mm_Vertical" (at 144.78 53.34 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 144.78 53.34 0)
@@ -2943,16 +2984,22 @@
     (pin "1" (uuid 00d57680-0fe7-4ec0-a2b3-68f29e14294c))
     (pin "2" (uuid 05251d90-1ae8-4474-8a67-aa97bdaa7290))
     (pin "3" (uuid 3b4ea879-8940-4f84-82ed-4d6d1c2ebf03))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "J5") (unit 1) (value "Li-Ion") (footprint "Connector_JST:JST_SH_BM03B-SRSS-TB_1x03-1MP_P1.00mm_Vertical")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:C") (at 33.02 146.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1e586c96-8f87-44e1-85fb-faa132d13260)
-    (default_instance (reference "C1") (unit 1) (value "C") (footprint "Resistor_SMD:R_0603_1608Metric"))
     (property "Reference" "C1" (at 36.83 145.415 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 35.56 147.32 0)
+    (property "Value" "10uF" (at 35.56 147.32 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 33.9852 149.86 0)
@@ -2963,13 +3010,19 @@
     )
     (pin "1" (uuid b506e603-2a01-4c51-a2ee-584da5ee8a48))
     (pin "2" (uuid 90a9cb2c-5af6-4555-919f-1f9682fb93c8))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "C1") (unit 1) (value "10uF") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:PWR_FLAG") (at 205.74 40.64 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 20bc85a8-a075-413e-b373-2e3f17380382)
-    (default_instance (reference "#FLG?") (unit 1) (value "PWR_FLAG") (footprint ""))
-    (property "Reference" "#FLG?" (at 207.645 40.64 0)
+    (property "Reference" "#FLG0102" (at 207.645 40.64 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 209.55 41.275 90)
@@ -2982,16 +3035,22 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 4e26ea80-6429-4f94-aaf9-1588215b2bd7))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#FLG0102") (unit 1) (value "PWR_FLAG") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:C") (at 124.46 62.23 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 224e0f84-0df8-4d4b-87a9-17c1968ca00b)
-    (default_instance (reference "C1") (unit 1) (value "C") (footprint "Resistor_SMD:R_0603_1608Metric"))
-    (property "Reference" "C1" (at 125.73 59.69 0)
+    (property "Reference" "C4" (at 125.73 59.69 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "C" (at 127 64.77 0)
+    (property "Value" "10uF" (at 127 64.77 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 123.4948 58.42 0)
@@ -3002,16 +3061,22 @@
     )
     (pin "1" (uuid b3846ae1-0570-44fa-ab99-03836700c9ae))
     (pin "2" (uuid 6d2490e9-a3c3-41c6-b4c9-cd6850117957))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "C4") (unit 1) (value "10uF") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:C") (at 294.64 138.43 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 22ce2581-3e36-441f-b587-7e438d9ee469)
-    (default_instance (reference "C1") (unit 1) (value "C") (footprint "Resistor_SMD:R_0603_1608Metric"))
-    (property "Reference" "C1" (at 295.91 135.89 0)
+    (property "Reference" "C12" (at 295.91 135.89 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 295.91 140.97 0)
+    (property "Value" "22nF" (at 295.91 140.97 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 295.6052 142.24 0)
@@ -3022,13 +3087,19 @@
     )
     (pin "1" (uuid 2c4463c8-16da-470d-8720-d7d47d2751a4))
     (pin "2" (uuid 787ca5c0-58d5-40a2-b033-46b1786bee13))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "C12") (unit 1) (value "22nF") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 354.33 147.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 24ae8984-c84b-4f9f-9969-7ac04a7ac360)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 354.33 153.67 0)
+    (property "Reference" "#PWR0126" (at 354.33 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 354.33 152.4 0)
@@ -3041,13 +3112,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 1173744b-a1ef-4bf8-b97c-0b6f790339e5))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0126") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:+3.3V") (at 139.7 209.55 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 253d432e-bafc-49ad-b27f-cbfd2820e2fe)
-    (default_instance (reference "#PWR?") (unit 1) (value "+3.3V") (footprint ""))
-    (property "Reference" "#PWR?" (at 139.7 213.36 0)
+    (property "Reference" "#PWR0114" (at 139.7 213.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 139.7 205.74 0)
@@ -3060,19 +3137,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid ec16b77e-cd5c-47e6-8e87-4997c9c86fb7))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0114") (unit 1) (value "+3.3V") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:FerriteBead") (at 323.85 74.93 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 25997b4f-42ff-476a-b127-d1b06e4ab0a0)
-    (default_instance (reference "FB1") (unit 1) (value "FerriteBead") (footprint ""))
     (property "Reference" "FB1" (at 316.23 73.66 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "FerriteBead" (at 311.15 77.47 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 322.072 74.93 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 322.072 74.93 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 323.85 74.93 0)
@@ -3080,13 +3163,19 @@
     )
     (pin "1" (uuid 0045e446-a061-44f2-bc84-c05727a74303))
     (pin "2" (uuid 29574b8f-5eae-431d-aaff-59ab61916209))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "FB1") (unit 1) (value "FerriteBead") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Mechanical:MountingHole") (at 335.28 240.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2d40d95c-ea04-40e1-af72-2bdbdb86a5c6)
-    (default_instance (reference "H1") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.2mm_M2"))
-    (property "Reference" "H1" (at 337.82 239.395 0)
+    (property "Reference" "H2" (at 337.82 239.395 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole" (at 337.82 241.935 0)
@@ -3098,13 +3187,19 @@
     (property "Datasheet" "~" (at 335.28 240.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "H2") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.2mm_M2")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:PWR_FLAG") (at 140.97 30.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2e31160a-d59a-418f-affc-b2d3dcdcd09d)
-    (default_instance (reference "#FLG?") (unit 1) (value "PWR_FLAG") (footprint ""))
-    (property "Reference" "#FLG?" (at 140.97 28.575 0)
+    (property "Reference" "#FLG0101" (at 140.97 28.575 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 140.97 26.67 0)
@@ -3117,19 +3212,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid f3700400-36c2-4adf-862b-5ea6b25b0d21))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#FLG0101") (unit 1) (value "PWR_FLAG") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 156.21 148.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 32e32662-1b56-4ee3-a9c2-8ad58104025d)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 158.75 147.32 0)
+    (property "Reference" "R6" (at 158.75 147.32 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 158.75 149.86 0)
+    (property "Value" "10K" (at 158.75 149.86 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 154.432 148.59 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 154.432 148.59 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 156.21 148.59 0)
@@ -3137,13 +3238,19 @@
     )
     (pin "1" (uuid f64ea681-4a53-46b8-8169-42a03b582e63))
     (pin "2" (uuid 405e5b58-68e3-4526-b635-eb03493db9d8))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R6") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 284.48 96.52 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 36618009-3fc2-40ed-a363-cd6b70b2a9fd)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 284.48 102.87 0)
+    (property "Reference" "#PWR0133" (at 284.48 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 284.48 101.6 0)
@@ -3156,13 +3263,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 08d6907d-3771-4ec5-b124-37f27b3a129f))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0133") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:VBUS") (at 323.85 68.58 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3972c683-7012-463c-9047-7f6e98e7c226)
-    (default_instance (reference "#PWR?") (unit 1) (value "VBUS") (footprint ""))
-    (property "Reference" "#PWR?" (at 323.85 72.39 0)
+    (property "Reference" "#PWR0142" (at 323.85 72.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VBUS" (at 326.39 64.77 0)
@@ -3175,19 +3288,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 86dad771-0f45-4ce5-a8bd-2e20986081df))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0142") (unit 1) (value "VBUS") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Connector_Generic:Conn_01x03") (at 76.2 222.25 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 417e5e57-f99b-4c79-9957-26594fdf8c17)
-    (default_instance (reference "J3") (unit 1) (value "Neopixel") (footprint ""))
-    (property "Reference" "J3" (at 78.74 222.885 0)
+    (property "Reference" "J2" (at 78.74 222.885 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Neopixel" (at 78.74 220.345 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 76.2 222.25 0)
+    (property "Footprint" "Connector_JST:JST_SH_BM03B-SRSS-TB_1x03-1MP_P1.00mm_Vertical" (at 76.2 222.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 76.2 222.25 0)
@@ -3196,13 +3315,19 @@
     (pin "1" (uuid ec336f40-a9ff-4597-aa0a-d4aac4564940))
     (pin "2" (uuid 36eecc76-b0e2-4a31-9da1-c7a92a832367))
     (pin "3" (uuid 3388204b-c5e1-404a-bb08-1670d8e74d6d))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "J2") (unit 1) (value "Neopixel") (footprint "Connector_JST:JST_SH_BM03B-SRSS-TB_1x03-1MP_P1.00mm_Vertical")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Mechanical:MountingHole") (at 361.95 240.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 476bbc40-22e9-407c-8ace-be05ea768e1d)
-    (default_instance (reference "H1") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.2mm_M2"))
-    (property "Reference" "H1" (at 364.49 239.395 0)
+    (property "Reference" "H4" (at 364.49 239.395 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole" (at 364.49 241.935 0)
@@ -3214,13 +3339,19 @@
     (property "Datasheet" "~" (at 361.95 240.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "H4") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.2mm_M2")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "#bbk:TagConnect") (at 133.35 157.48 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4b48ef62-7de2-4c4a-9b86-a718f441caed)
-    (default_instance (reference "J1") (unit 1) (value "TagConnect") (footprint "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical"))
-    (property "Reference" "J1" (at 132.08 148.59 0)
+    (property "Reference" "J4" (at 132.08 148.59 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TagConnect" (at 132.08 151.13 0)
@@ -3238,13 +3369,19 @@
     (pin "4" (uuid a51aaadc-886e-4df5-b52c-b1159a708589))
     (pin "5" (uuid d30bb73a-4277-4587-ac5e-e7516b2f2b90))
     (pin "6" (uuid 15407f7c-8654-43f6-96a9-e22900c0a103))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "J4") (unit 1) (value "TagConnect") (footprint "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 68.58 248.92 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4dc51034-91e2-404e-9b95-a38b6469ee51)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 68.58 255.27 0)
+    (property "Reference" "#PWR0111" (at 68.58 255.27 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 68.58 254 0)
@@ -3257,13 +3394,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 2df1aefd-208c-4560-b63c-20e82fde4994))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0111") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 166.37 171.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4e2c5ee4-7aca-498a-84b3-8c4fac48f7e7)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 166.37 177.8 0)
+    (property "Reference" "#PWR0102" (at 166.37 177.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 166.37 176.53 0)
@@ -3276,13 +3419,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 8a3ae852-d60a-4103-95b1-5e52e9e9ef1c))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0102") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 33.02 171.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 546fbe0b-f06a-4aeb-ad68-ff82e1275f6c)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 33.02 177.8 0)
+    (property "Reference" "#PWR0121" (at 33.02 177.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 33.02 176.53 0)
@@ -3295,12 +3444,18 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 4e0214fe-5a72-4cf4-a787-caf69f1bd67e))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0121") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "#bbk:MP2667GG-xxxx-Z") (at 101.6 49.53 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 56a438f8-2e01-4183-a652-5e06ef18f630)
-    (default_instance (reference "U2") (unit 1) (value "MP2667GG-xxxx-Z") (footprint "#bbk:MP2667GG-xxxx-Z"))
     (property "Reference" "U2" (at 101.6 34.29 0)
       (effects (font (size 1.524 1.524)))
     )
@@ -3323,16 +3478,22 @@
     (pin "7" (uuid 571cf171-95a9-485e-81e4-371045009985))
     (pin "8" (uuid 5d5c5855-b546-4e30-b077-f45bc7c2e419))
     (pin "9" (uuid db1a0422-1612-4de6-a500-37a49ed89bbc))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "U2") (unit 1) (value "MP2667GG-xxxx-Z") (footprint "#bbk:MP2667GG-xxxx-Z")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:C") (at 201.93 55.88 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5beabab7-40e3-4298-85e3-cd405fb7bde1)
-    (default_instance (reference "C1") (unit 1) (value "C") (footprint "Resistor_SMD:R_0603_1608Metric"))
-    (property "Reference" "C1" (at 205.74 55.245 0)
+    (property "Reference" "C8" (at 205.74 55.245 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 205.74 57.785 0)
+    (property "Value" "10uF" (at 205.74 57.785 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 202.8952 59.69 0)
@@ -3343,13 +3504,19 @@
     )
     (pin "1" (uuid a5c6cfd6-101f-45f1-aaa7-b4cc2d9223aa))
     (pin "2" (uuid f02b1c17-0ebb-4cea-a06a-9a48f3d0ade6))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "C8") (unit 1) (value "10uF") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:+3.3V") (at 95.25 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 60c60741-84c0-40a1-9b81-3da613e1a612)
-    (default_instance (reference "#PWR?") (unit 1) (value "+3.3V") (footprint ""))
-    (property "Reference" "#PWR?" (at 95.25 119.38 0)
+    (property "Reference" "#PWR0123" (at 95.25 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 95.25 111.76 0)
@@ -3362,19 +3529,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 1a68a4d3-f82c-43c8-b2a9-81d0ad7a0581))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0123") (unit 1) (value "+3.3V") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Switch:SW_Push") (at 191.77 148.59 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 615cd08e-8eb0-4527-b2a7-410bbc600c74)
-    (default_instance (reference "SW1") (unit 1) (value "Reset") (footprint "Resistor_SMD:R_1210_3225Metric"))
-    (property "Reference" "SW1" (at 194.31 147.32 90)
+    (property "Reference" "SW2" (at 194.31 147.32 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "Reset" (at 194.31 151.13 90)
+    (property "Value" "Wakeup" (at 194.31 151.13 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_1210_3225Metric" (at 196.85 148.59 0)
+    (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (at 196.85 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 196.85 148.59 0)
@@ -3382,16 +3555,22 @@
     )
     (pin "1" (uuid 0fb08891-4091-4ffd-8210-e9e5bea70905))
     (pin "2" (uuid 0e47e97b-1d8e-4dfa-82a2-0d09e54a0b0b))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "SW2") (unit 1) (value "Wakeup") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:C") (at 284.48 130.81 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 68710d98-c051-461a-b101-b708f727d0c2)
-    (default_instance (reference "C1") (unit 1) (value "C") (footprint "Resistor_SMD:R_0603_1608Metric"))
-    (property "Reference" "C1" (at 276.86 129.54 0)
+    (property "Reference" "C9" (at 276.86 129.54 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 276.86 132.08 0)
+    (property "Value" "10uF" (at 276.86 132.08 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 285.4452 134.62 0)
@@ -3402,19 +3581,25 @@
     )
     (pin "1" (uuid 480a435a-9ce9-4e1d-a693-fe464f1847b4))
     (pin "2" (uuid ade590a9-c738-4a5d-ba57-b4d91c223109))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "C9") (unit 1) (value "10uF") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 62.23 48.26 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6942161d-83f6-4a72-a9d5-f60c3909b111)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 60.96 50.8 90)
+    (property "Reference" "R4" (at 60.96 50.8 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 64.77 50.8 90)
+    (property "Value" "5.1K" (at 64.77 50.8 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 62.23 50.038 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 62.23 50.038 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 62.23 48.26 0)
@@ -3422,19 +3607,25 @@
     )
     (pin "1" (uuid fd539c3f-0886-405e-9636-8eff2fd0fa13))
     (pin "2" (uuid d84d3288-76fe-4e85-b035-8c3b00f9a56b))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R4") (unit 1) (value "5.1K") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 354.33 129.54 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7100ab61-0744-4978-b311-92e1e9166022)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 356.87 128.905 0)
+    (property "Reference" "R17" (at 356.87 128.905 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 356.87 131.445 0)
+    (property "Value" "2R" (at 356.87 131.445 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 352.552 129.54 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 352.552 129.54 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 354.33 129.54 0)
@@ -3442,13 +3633,19 @@
     )
     (pin "1" (uuid d3b650e7-d314-4b20-8e5d-77b6b99b90f0))
     (pin "2" (uuid 6ff6d39e-e759-4f04-a970-027afef3aa72))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R17") (unit 1) (value "2R") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 137.16 71.12 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 763c6f17-c8e9-46a7-ad6d-2df104287b2e)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 137.16 77.47 0)
+    (property "Reference" "#PWR0118" (at 137.16 77.47 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 137.16 76.2 0)
@@ -3461,19 +3658,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 54881d86-28f2-4cf1-8e3f-2332444e200c))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0118") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Switch:SW_Push") (at 166.37 163.83 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 775d766e-bee5-44c7-8d37-e3cb716e97a1)
-    (default_instance (reference "SW1") (unit 1) (value "Reset") (footprint "Resistor_SMD:R_1210_3225Metric"))
     (property "Reference" "SW1" (at 168.91 161.29 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Reset" (at 168.91 165.1 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_1210_3225Metric" (at 171.45 163.83 0)
+    (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (at 171.45 163.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 171.45 163.83 0)
@@ -3481,19 +3684,25 @@
     )
     (pin "1" (uuid a6edf3f5-9053-49f5-84ce-87ab54bce822))
     (pin "2" (uuid 4e29a682-ae2f-4d50-b431-e20ab953a984))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "SW1") (unit 1) (value "Reset") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 148.59 217.17 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 77bf8f1e-5346-4fe4-bbb7-683dbb64498b)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 152.4 215.9 0)
+    (property "Reference" "R18" (at 152.4 215.9 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 152.4 218.44 0)
+    (property "Value" "5.1K" (at 152.4 218.44 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 150.368 217.17 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 150.368 217.17 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 148.59 217.17 0)
@@ -3501,13 +3710,19 @@
     )
     (pin "1" (uuid 0786e61c-1d78-4fe3-9596-1dc221d0ee77))
     (pin "2" (uuid 400d39bc-837d-4bed-a80e-81d9bb5378ba))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R18") (unit 1) (value "5.1K") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 160.02 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 79ef2f58-9ad6-4ef8-b972-caabda93e44b)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 160.02 78.74 0)
+    (property "Reference" "#PWR0120" (at 160.02 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 160.02 77.47 0)
@@ -3520,19 +3735,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 54694f3c-7fde-42aa-822e-37f060fcbbf6))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0120") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 236.22 227.33 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7b0e3bbd-e805-4f5d-aaca-48d3969588e1)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 236.22 224.79 90)
+    (property "Reference" "R11" (at 236.22 224.79 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 236.22 229.87 90)
+    (property "Value" "330R" (at 236.22 229.87 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 236.22 225.552 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 236.22 225.552 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 236.22 227.33 0)
@@ -3540,16 +3761,22 @@
     )
     (pin "1" (uuid 71b8a00b-a3ea-4688-9328-b878daaa1920))
     (pin "2" (uuid e43e00d2-bafa-4299-80d1-b34a9e998a34))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R11") (unit 1) (value "330R") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:C") (at 179.07 148.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7b61ec58-5c1e-4895-876b-fbf3cba06804)
-    (default_instance (reference "C1") (unit 1) (value "C") (footprint "Resistor_SMD:R_0603_1608Metric"))
-    (property "Reference" "C1" (at 182.88 147.32 0)
+    (property "Reference" "C7" (at 182.88 147.32 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 181.61 151.13 0)
+    (property "Value" "100nF" (at 181.61 151.13 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 180.0352 152.4 0)
@@ -3560,13 +3787,19 @@
     )
     (pin "1" (uuid ee7534f6-b35f-40fb-bf8a-0b909f2fbd18))
     (pin "2" (uuid ee8345b4-fd05-457b-8096-747874177d6b))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "C7") (unit 1) (value "100nF") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 201.93 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7bb5f303-c52f-4e2e-ad91-f5b68a066ffd)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 201.93 78.74 0)
+    (property "Reference" "#PWR0129" (at 201.93 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 201.93 77.47 0)
@@ -3579,13 +3812,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 3364fc72-a3d4-44e1-9285-830e76e468df))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0129") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 196.85 247.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7bf6e0ef-fba2-4215-a233-9558b7573a20)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 196.85 254 0)
+    (property "Reference" "#PWR0135" (at 196.85 254 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 196.85 252.73 0)
@@ -3598,13 +3837,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid f823b71d-41b3-4d15-8c27-a1cc96db4a4c))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0135") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:+3.3V") (at 148.59 209.55 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7f35f5da-4ee5-4640-9507-04b0bdaf037d)
-    (default_instance (reference "#PWR?") (unit 1) (value "+3.3V") (footprint ""))
-    (property "Reference" "#PWR?" (at 148.59 213.36 0)
+    (property "Reference" "#PWR0146" (at 148.59 213.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 148.59 205.74 0)
@@ -3617,13 +3862,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid d7b41d04-6f1f-4794-a868-c78b3a7c5e5b))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0146") (unit 1) (value "+3.3V") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 156.21 171.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8023059c-ee04-4375-9793-bdcf5ec80f2f)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 156.21 177.8 0)
+    (property "Reference" "#PWR0101" (at 156.21 177.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 156.21 176.53 0)
@@ -3636,19 +3887,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid c2f0d8fd-453f-4f59-980e-ef7b08f9b14f))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0101") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 274.32 106.68 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 84d1340a-e41e-4f5a-a14c-ad71cf9ebbdc)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 274.32 104.14 90)
+    (property "Reference" "R12" (at 274.32 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 274.32 109.22 90)
+    (property "Value" "10K" (at 274.32 109.22 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 274.32 108.458 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 274.32 108.458 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 274.32 106.68 0)
@@ -3656,19 +3913,25 @@
     )
     (pin "1" (uuid 534d9768-38b6-43f4-87ed-c8eedb8b19c5))
     (pin "2" (uuid 057a3015-cdf1-4528-b2ba-af0439452fbc))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R12") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 44.45 240.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8575fc95-4889-4a7b-b7f3-ae046cf68612)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
     (property "Reference" "R1" (at 46.99 239.395 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 46.99 241.935 0)
+    (property "Value" "10K" (at 46.99 241.935 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 42.672 240.03 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 42.672 240.03 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 44.45 240.03 0)
@@ -3676,19 +3939,25 @@
     )
     (pin "1" (uuid 1263a997-d4f1-41a3-890e-50cf5210ea07))
     (pin "2" (uuid 2e1112bd-984b-4572-bb5e-8dac6ebfcaaa))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R1") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 160.02 49.53 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 859f045c-5b2a-4f54-9370-52fc40805679)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 162.56 48.895 0)
+    (property "Reference" "R7" (at 162.56 48.895 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 162.56 51.435 0)
+    (property "Value" "10K" (at 162.56 51.435 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 158.242 49.53 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 158.242 49.53 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 160.02 49.53 0)
@@ -3696,13 +3965,19 @@
     )
     (pin "1" (uuid 8983ce14-d4b8-4e56-b9d0-7cb7bdc54261))
     (pin "2" (uuid b0a950ba-8e0f-469f-b619-c5bdb8eb4461))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R7") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 68.58 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 86b9c2c8-62b4-4883-9965-72adf064c8b0)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 68.58 80.01 0)
+    (property "Reference" "#PWR0107" (at 68.58 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 68.58 78.74 0)
@@ -3715,13 +3990,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid d003a1a4-4f47-48ad-b44a-3ee549721520))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0107") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 294.64 147.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 87889636-8015-4e19-abd9-d677a8e94dd3)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 294.64 153.67 0)
+    (property "Reference" "#PWR0139" (at 294.64 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 294.64 152.4 0)
@@ -3734,19 +4015,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid ed5e8e38-3e62-4ad0-8cc1-975c8b5589d3))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0139") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 50.8 219.71 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 88768193-c9f4-4e3f-abb4-aa524bf2805a)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 50.8 214.63 90)
+    (property "Reference" "R5" (at 50.8 214.63 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 50.8 217.17 90)
+    (property "Value" "190R" (at 50.8 217.17 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 50.8 217.932 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 50.8 217.932 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 50.8 219.71 0)
@@ -3754,13 +4041,19 @@
     )
     (pin "1" (uuid dee502bf-418a-4ff6-afa1-c672e3903beb))
     (pin "2" (uuid 21057139-c1c2-4562-8fac-7499bced6252))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R5") (unit 1) (value "190R") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "#bbk:STM32G0xxFx") (at 95.25 142.24 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 89e6b0bb-5792-43b5-a615-3490412f8fbc)
-    (default_instance (reference "U3") (unit 1) (value "STM32G0xxFx") (footprint "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm"))
-    (property "Reference" "U3" (at 101.6 124.46 0)
+    (property "Reference" "U1" (at 101.6 124.46 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "STM32G0xxFx" (at 77.47 123.19 0)
@@ -3792,13 +4085,19 @@
     (pin "7" (uuid c3f2b1d3-c532-43d6-a1e3-70e20a35b18a))
     (pin "8" (uuid b4db135e-f839-431f-aa6c-e744cceccaab))
     (pin "9" (uuid 832d3193-eabd-42a4-8086-4e777a491623))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "U1") (unit 1) (value "STM32G0xxFx") (footprint "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:VBUS") (at 130.81 30.48 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8ac75545-c533-49ab-946b-3af294d9a77a)
-    (default_instance (reference "#PWR?") (unit 1) (value "VBUS") (footprint ""))
-    (property "Reference" "#PWR?" (at 130.81 34.29 0)
+    (property "Reference" "#PWR0116" (at 130.81 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VBUS" (at 130.81 26.67 0)
@@ -3811,13 +4110,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 51f5044b-d230-43c4-8a8b-50f13e9e3397))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0116") (unit 1) (value "VBUS") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:+3.3V") (at 201.93 33.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8d266fb4-3eb5-4dff-9f76-3312cdb18e1e)
-    (default_instance (reference "#PWR?") (unit 1) (value "+3.3V") (footprint ""))
-    (property "Reference" "#PWR?" (at 201.93 36.83 0)
+    (property "Reference" "#PWR0125" (at 201.93 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 201.93 29.21 0)
@@ -3830,19 +4135,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 2685fa76-74d6-4cac-88eb-81acceed81ba))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0125") (unit 1) (value "+3.3V") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 50.8 233.68 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8db269e9-5f11-4e0c-b784-f132a78a8fa7)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 50.8 228.6 90)
+    (property "Reference" "R2" (at 50.8 228.6 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 50.8 231.14 90)
+    (property "Value" "190R" (at 50.8 231.14 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 50.8 231.902 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 50.8 231.902 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 50.8 233.68 0)
@@ -3850,13 +4161,19 @@
     )
     (pin "1" (uuid 15112376-3db1-4952-9a3c-1edafe4fe6b2))
     (pin "2" (uuid dc882bf8-f07d-4c43-83de-5d63a481bd15))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R2") (unit 1) (value "190R") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 97.79 248.92 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 91a3fe76-a646-4a21-b610-7ac743311c27)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 97.79 255.27 0)
+    (property "Reference" "#PWR0112" (at 97.79 255.27 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 97.79 254 0)
@@ -3869,19 +4186,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 66d07571-9407-4f2d-952b-4a27ad7e2797))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0112") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 294.64 125.73 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 958140c0-51c4-4351-8185-12f4b0b0c0fd)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 298.45 124.46 0)
+    (property "Reference" "R14" (at 298.45 124.46 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 298.45 127 0)
+    (property "Value" "47K" (at 298.45 127 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 296.418 125.73 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 296.418 125.73 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 294.64 125.73 0)
@@ -3889,19 +4212,25 @@
     )
     (pin "1" (uuid 4bb3d291-eed8-49f9-9c25-a624845efa22))
     (pin "2" (uuid 3d78db58-0cb6-484f-8604-051af17dc085))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R14") (unit 1) (value "47K") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 62.23 45.72 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 959025be-52bd-4cd2-b97a-e427116fed87)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 60.96 43.18 90)
+    (property "Reference" "R3" (at 60.96 43.18 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 64.77 43.18 90)
+    (property "Value" "5.1K" (at 64.77 43.18 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 62.23 47.498 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 62.23 47.498 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 62.23 45.72 0)
@@ -3909,12 +4238,18 @@
     )
     (pin "1" (uuid 6e8219f9-afad-4f2e-a593-6bcb19c397ee))
     (pin "2" (uuid 6227c0e7-e6c5-4c9e-b1a9-4296adefec20))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R3") (unit 1) (value "5.1K") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:Polyfuse") (at 72.39 40.64 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 96c85616-738c-4834-9200-daac9f1da1d9)
-    (default_instance (reference "F1") (unit 1) (value "Polyfuse") (footprint "Resistor_SMD:R_0603_1608Metric"))
     (property "Reference" "F1" (at 72.39 35.56 90)
       (effects (font (size 1.27 1.27)))
     )
@@ -3929,13 +4264,19 @@
     )
     (pin "1" (uuid a65e97c1-d2d2-4952-93e4-fdd1cd2818e2))
     (pin "2" (uuid 1f9873de-4f81-47c4-9531-83fb905176be))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "F1") (unit 1) (value "Polyfuse") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:+3.3V") (at 147.32 138.43 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 98d0510a-25d3-4e9a-941d-0b3b6dc8d50c)
-    (default_instance (reference "#PWR?") (unit 1) (value "+3.3V") (footprint ""))
-    (property "Reference" "#PWR?" (at 147.32 142.24 0)
+    (property "Reference" "#PWR0105" (at 147.32 142.24 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 147.32 134.62 0)
@@ -3948,19 +4289,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 5a65f939-439d-44ef-8fda-5ff36f3ae957))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0105") (unit 1) (value "+3.3V") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 201.93 227.33 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9ba8f81e-e645-4d1a-85c6-ab9af53f39ab)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 201.93 224.79 90)
+    (property "Reference" "R10" (at 201.93 224.79 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 201.93 229.87 90)
+    (property "Value" "190R" (at 201.93 229.87 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 201.93 225.552 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 201.93 225.552 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 201.93 227.33 0)
@@ -3968,16 +4315,22 @@
     )
     (pin "1" (uuid 9153eea7-571b-4432-97d7-881d8b8c3a2d))
     (pin "2" (uuid 83eb5049-8a6b-4b52-a056-e0e02c67dd22))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R10") (unit 1) (value "190R") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:Q_NMOS_SGD") (at 66.04 233.68 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9c8522b3-2eb6-4e97-a0b8-5d30f59d9432)
-    (default_instance (reference "Q1") (unit 1) (value "Q_NMOS_SGD") (footprint "Package_TO_SOT_SMD:SOT-23"))
     (property "Reference" "Q1" (at 72.39 233.045 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "Q_NMOS_SGD" (at 72.39 235.585 0)
+    (property "Value" "PMV15ENEA" (at 72.39 235.585 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 71.12 231.14 0)
@@ -3989,13 +4342,19 @@
     (pin "1" (uuid 5f743fe6-5e7d-4c0f-92f7-d61276b58559))
     (pin "2" (uuid a5beebfc-9a85-4ba6-9475-09d9f3ba8581))
     (pin "3" (uuid febcdf7c-ff5c-4a67-82ac-ed9c7fe63bf4))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "Q1") (unit 1) (value "PMV15ENEA") (footprint "Package_TO_SOT_SMD:SOT-23")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:+3.3V") (at 156.21 138.43 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9cdf7766-978a-4fc9-a5f2-6f9a20a4202a)
-    (default_instance (reference "#PWR?") (unit 1) (value "+3.3V") (footprint ""))
-    (property "Reference" "#PWR?" (at 156.21 142.24 0)
+    (property "Reference" "#PWR0104" (at 156.21 142.24 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 156.21 134.62 0)
@@ -4008,16 +4367,22 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 53be0591-a443-48c9-a7f1-4c3397a2f76f))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0104") (unit 1) (value "+3.3V") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:C") (at 156.21 163.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a3ef4cae-cd74-477a-b779-80c06764e0f7)
-    (default_instance (reference "C1") (unit 1) (value "C") (footprint "Resistor_SMD:R_0603_1608Metric"))
-    (property "Reference" "C1" (at 158.75 162.56 0)
+    (property "Reference" "C5" (at 158.75 162.56 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 158.75 166.37 0)
+    (property "Value" "100nF" (at 158.75 166.37 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 157.1752 167.64 0)
@@ -4028,19 +4393,25 @@
     )
     (pin "1" (uuid 4fec5f57-d0b2-4c93-bb7b-43a81262e4e5))
     (pin "2" (uuid 67b72d6b-f2f2-46a7-b893-80861b6d35ed))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "C5") (unit 1) (value "100nF") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 304.8 125.73 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a3f2c5e6-2b6b-42a2-98f1-da9e083669bf)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 308.61 124.46 0)
+    (property "Reference" "R15" (at 308.61 124.46 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 308.61 127 0)
+    (property "Value" "1K" (at 308.61 127 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 306.578 125.73 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 306.578 125.73 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 304.8 125.73 0)
@@ -4048,13 +4419,19 @@
     )
     (pin "1" (uuid 4b177aa5-eb02-4ddf-8e7b-fe1c0ff0eec2))
     (pin "2" (uuid 6b5ea7b8-399f-4e78-bf20-3de3afabda8c))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R15") (unit 1) (value "1K") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 325.12 147.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a5facc61-373b-4bf8-84d9-817546abdbcc)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 325.12 153.67 0)
+    (property "Reference" "#PWR0138" (at 325.12 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 325.12 152.4 0)
@@ -4067,13 +4444,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid ccbaddc3-58cc-419c-83f4-0c49f43a5146))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0138") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 44.45 248.92 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a81d1d2c-a62d-48f4-ae8c-a99774d8cc01)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 44.45 255.27 0)
+    (property "Reference" "#PWR0110" (at 44.45 255.27 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 44.45 254 0)
@@ -4086,19 +4469,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 786d7e1a-a61a-4723-883f-7b0b83b457b8))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0110") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 139.7 217.17 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a97d24e7-3cff-4317-8a9c-c83f3397bab0)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 143.51 215.9 0)
+    (property "Reference" "R19" (at 143.51 215.9 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 143.51 218.44 0)
+    (property "Value" "5.1K" (at 143.51 218.44 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 141.478 217.17 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 141.478 217.17 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 139.7 217.17 0)
@@ -4106,19 +4495,25 @@
     )
     (pin "1" (uuid 8edb1efe-fb08-4698-815a-670283d874d1))
     (pin "2" (uuid 827e0f05-8186-40af-a65b-96eb81f360a0))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R19") (unit 1) (value "5.1K") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Connector_Generic:Conn_01x04") (at 160.02 232.41 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid adc405a2-c487-403c-87bb-318a28731c71)
-    (default_instance (reference "J4") (unit 1) (value "Conn_01x04") (footprint ""))
-    (property "Reference" "J4" (at 162.56 231.775 0)
+    (property "Reference" "J6" (at 162.56 231.775 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "Conn_01x04" (at 162.56 229.235 0)
+    (property "Value" "I2C" (at 162.56 229.235 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 160.02 232.41 0)
+    (property "Footprint" "Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical" (at 160.02 232.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 160.02 232.41 0)
@@ -4128,13 +4523,19 @@
     (pin "2" (uuid 67e0baef-54db-4665-8553-5a9977196528))
     (pin "3" (uuid 0deb96d4-6f1f-4f31-8c26-106e24fcbb8c))
     (pin "4" (uuid 9f244788-32a9-4414-877f-6b288b821f6d))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "J6") (unit 1) (value "I2C") (footprint "Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 147.32 171.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid b4b7d4df-a8ef-4132-b62a-1ea318ae2f37)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 147.32 177.8 0)
+    (property "Reference" "#PWR0103" (at 147.32 177.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 147.32 176.53 0)
@@ -4147,13 +4548,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid ea74781d-26e6-4f9d-b3ab-39ebb677e822))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 38.1 83.82 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c0b9bca3-50dd-4739-becc-9403a698f574)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 38.1 90.17 0)
+    (property "Reference" "#PWR0106" (at 38.1 90.17 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 38.1 88.9 0)
@@ -4166,13 +4573,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 342e2142-f00a-4df5-bcaf-5a286fef3a50))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0106") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 344.17 147.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c401a151-2fac-4936-b82d-938c746153fb)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 344.17 153.67 0)
+    (property "Reference" "#PWR0127" (at 344.17 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 344.17 152.4 0)
@@ -4185,19 +4598,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 912dfd0a-c52d-4716-aac8-ce94402dcd96))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0127") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Connector_Generic:Conn_01x04") (at 363.22 93.98 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c46ac2fe-02a4-4a2c-bf07-01dc042aa06e)
-    (default_instance (reference "J4") (unit 1) (value "Conn_01x04") (footprint ""))
-    (property "Reference" "J4" (at 365.76 94.615 0)
+    (property "Reference" "J7" (at 365.76 94.615 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "Conn_01x04" (at 365.76 97.155 0)
+    (property "Value" "Motors" (at 365.76 97.155 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 363.22 93.98 0)
+    (property "Footprint" "Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical" (at 363.22 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 363.22 93.98 0)
@@ -4207,19 +4626,25 @@
     (pin "2" (uuid a1b39c24-1442-47a6-8556-d9243f987d57))
     (pin "3" (uuid b87f644a-3bc5-481b-bca2-4c91d69675aa))
     (pin "4" (uuid f668728d-1b5e-44da-9aae-8f7188f3c597))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "J7") (unit 1) (value "Motors") (footprint "Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 130.81 45.72 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c6a71a09-71eb-462d-8989-417c0387783b)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 132.08 43.18 90)
+    (property "Reference" "R20" (at 132.08 43.18 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "R" (at 132.08 48.26 90)
+    (property "Value" "10K" (at 132.08 48.26 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "" (at 130.81 43.942 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 130.81 43.942 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 130.81 45.72 0)
@@ -4227,19 +4652,25 @@
     )
     (pin "1" (uuid c03a729e-941b-48ef-ad7f-aa54973f2a67))
     (pin "2" (uuid cbcf9bca-4be7-4da0-9f82-c288f82792f3))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R20") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 160.02 64.77 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c70eeab8-b26a-4b6b-85a6-6e2128ec11fb)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 162.56 64.135 0)
+    (property "Reference" "R8" (at 162.56 64.135 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 162.56 66.675 0)
+    (property "Value" "20K" (at 162.56 66.675 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 158.242 64.77 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 158.242 64.77 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 160.02 64.77 0)
@@ -4247,16 +4678,22 @@
     )
     (pin "1" (uuid 01178ab5-19f8-47c3-a32e-14f21eff304c))
     (pin "2" (uuid 823d8869-77a9-41c5-864d-33d49d9f6508))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R8") (unit 1) (value "20K") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:C") (at 77.47 45.72 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c7abfe31-776f-46e9-bae7-482965e7b12b)
-    (default_instance (reference "C1") (unit 1) (value "C") (footprint "Resistor_SMD:R_0603_1608Metric"))
-    (property "Reference" "C1" (at 80.01 43.18 90)
+    (property "Reference" "C3" (at 80.01 43.18 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "C" (at 81.28 48.26 90)
+    (property "Value" "10uF" (at 81.28 48.26 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 81.28 44.7548 0)
@@ -4267,13 +4704,19 @@
     )
     (pin "1" (uuid 092185b2-06ff-48e3-a256-1d741f46f972))
     (pin "2" (uuid e37ef09f-0815-42c4-a0d3-f140b2db2d42))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "C3") (unit 1) (value "10uF") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 46.99 171.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c905b1b3-fb94-42b1-922e-3e0ec384c766)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 46.99 177.8 0)
+    (property "Reference" "#PWR0144" (at 46.99 177.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 46.99 176.53 0)
@@ -4286,13 +4729,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 241c3d61-2cd2-482c-95d8-3f96e5f5ddbd))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0144") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:+3.3V") (at 179.07 113.03 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c95f189c-4e0e-45a2-9af8-8e3af35b37cc)
-    (default_instance (reference "#PWR?") (unit 1) (value "+3.3V") (footprint ""))
-    (property "Reference" "#PWR?" (at 179.07 116.84 0)
+    (property "Reference" "#PWR0131" (at 179.07 116.84 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 179.07 109.22 0)
@@ -4305,13 +4754,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid be534c11-82ba-4876-899f-8d961e783ad2))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0131") (unit 1) (value "+3.3V") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:+3.3V") (at 125.73 209.55 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid c9ea412c-1b31-4c26-9a52-90e8ccc24b5e)
-    (default_instance (reference "#PWR?") (unit 1) (value "+3.3V") (footprint ""))
-    (property "Reference" "#PWR?" (at 125.73 213.36 0)
+    (property "Reference" "#PWR0145" (at 125.73 213.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 125.73 205.74 0)
@@ -4324,19 +4779,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 1ec6f433-05c3-4146-a137-699b2cb1507f))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0145") (unit 1) (value "+3.3V") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "#bbk:AP7370-33W5-7") (at 187.96 43.18 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cd0f24ae-094e-4888-8e16-91cb09b05014)
-    (default_instance (reference "U1") (unit 1) (value "AP7370-33W5-7") (footprint "Package_TO_SOT_SMD:TSOT-23-5_HandSoldering"))
-    (property "Reference" "U1" (at 187.96 34.29 0)
+    (property "Reference" "U4" (at 187.96 34.29 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "AP7370-33W5-7" (at 187.96 36.83 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Package_TO_SOT_SMD:TSOT-23-5_HandSoldering" (at 187.96 34.29 0)
+    (property "Footprint" "Package_TO_SOT_SMD:TSOT-23-5" (at 187.96 34.29 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "https://www.mouser.com/datasheet/2/115/AP7370-1605740.pdf" (at 185.42 31.75 0)
@@ -4347,12 +4808,18 @@
     (pin "3" (uuid 74b2f769-92d6-4a2e-bc1f-27363bf9c4ad))
     (pin "4" (uuid b7652182-33b7-40b3-9f11-a4971d3f9b6f))
     (pin "5" (uuid 0c57e1d1-9ccb-4bef-b1a4-9466036ecdef))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "U4") (unit 1) (value "AP7370-33W5-7") (footprint "Package_TO_SOT_SMD:TSOT-23-5")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Mechanical:MountingHole") (at 335.28 227.33 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid cfe1167e-3b92-44a3-805c-68d4d975320a)
-    (default_instance (reference "H1") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.2mm_M2"))
     (property "Reference" "H1" (at 337.82 226.695 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
@@ -4365,13 +4832,19 @@
     (property "Datasheet" "~" (at 335.28 227.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "H1") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.2mm_M2")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 304.8 147.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d0f8fb6e-c26c-468d-a771-53795d542ca3)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 304.8 153.67 0)
+    (property "Reference" "#PWR0140" (at 304.8 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 304.8 152.4 0)
@@ -4384,16 +4857,22 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid f54a6df5-d0ba-4fcc-ab11-306bd81abfdc))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0140") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:C") (at 284.48 91.44 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d1305bd3-a1b2-4efa-880f-68c3c4401219)
-    (default_instance (reference "C1") (unit 1) (value "C") (footprint "Resistor_SMD:R_0603_1608Metric"))
-    (property "Reference" "C1" (at 279.4 88.9 0)
+    (property "Reference" "C10" (at 279.4 88.9 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 278.13 93.98 0)
+    (property "Value" "100nF" (at 278.13 93.98 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 285.4452 95.25 0)
@@ -4404,13 +4883,19 @@
     )
     (pin "1" (uuid 25022f87-7967-40f5-a739-be2db77da824))
     (pin "2" (uuid f3df731d-3e04-48f5-9e89-6ac85c650eec))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "C10") (unit 1) (value "100nF") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Mechanical:MountingHole") (at 361.95 227.33 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d3c6e73b-0e30-42bb-b5be-2ffa30e33c0a)
-    (default_instance (reference "H1") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.2mm_M2"))
-    (property "Reference" "H1" (at 364.49 226.695 0)
+    (property "Reference" "H3" (at 364.49 226.695 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole" (at 364.49 229.235 0)
@@ -4422,13 +4907,19 @@
     (property "Datasheet" "~" (at 361.95 227.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "H3") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.2mm_M2")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:VBUS") (at 68.58 209.55 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d3d15bfa-35ab-4498-8395-1426e8e53fb2)
-    (default_instance (reference "#PWR?") (unit 1) (value "VBUS") (footprint ""))
-    (property "Reference" "#PWR?" (at 68.58 213.36 0)
+    (property "Reference" "#PWR0109" (at 68.58 213.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VBUS" (at 68.58 205.74 0)
@@ -4441,13 +4932,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid bd74699d-1152-49e8-82b9-14b64b4572dc))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0109") (unit 1) (value "VBUS") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Connector:USB_C_Receptacle_USB2.0") (at 38.1 55.88 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d5976fff-85d0-4726-89d9-ad6738999b3f)
-    (default_instance (reference "J2") (unit 1) (value "USB_C_Receptacle_USB2.0") (footprint "#bbk:USB_C_Receptacle_JAE_DX07S016JA3R1500"))
-    (property "Reference" "J2" (at 38.1 34.29 0)
+    (property "Reference" "J1" (at 38.1 34.29 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "USB_C_Receptacle_USB2.0" (at 38.1 36.83 0)
@@ -4476,13 +4973,19 @@
     (pin "B8" (uuid 0978ce98-ec08-434b-adf9-511f49e06ee5))
     (pin "B9" (uuid 0ef334eb-6d43-4643-97ae-227835b73ce7))
     (pin "S1" (uuid 3a121d89-fbd4-4b02-8a0f-b3f01d117555))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "J1") (unit 1) (value "USB_C_Receptacle_USB2.0") (footprint "#bbk:USB_C_Receptacle_JAE_DX07S016JA3R1500")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 243.84 247.65 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d5a061ce-cbba-4ed4-bb14-b8219246ce81)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 243.84 254 0)
+    (property "Reference" "#PWR0134" (at 243.84 254 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 243.84 252.73 0)
@@ -4495,13 +4998,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid ac89d783-fc98-4d98-9463-e9f021d6b19e))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0134") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 101.6 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d724f731-56e8-45c0-9e78-fbe68ed82ea6)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 101.6 78.74 0)
+    (property "Reference" "#PWR0117" (at 101.6 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 101.6 77.47 0)
@@ -4514,13 +5023,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 8414e5aa-c50f-41f3-b252-94314490dfe9))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0117") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 83.82 168.91 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d8d9c70b-e052-488d-8443-7552b49d4e1a)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 83.82 175.26 0)
+    (property "Reference" "#PWR0124" (at 83.82 175.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 83.82 173.99 0)
@@ -4533,16 +5048,22 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e8120024-70b7-490d-8924-0c228624990f))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0124") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:C") (at 46.99 146.05 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d948c0ae-f0dc-4217-bee9-c79bf60f10ac)
-    (default_instance (reference "C1") (unit 1) (value "C") (footprint "Resistor_SMD:R_0603_1608Metric"))
-    (property "Reference" "C1" (at 50.8 145.415 0)
+    (property "Reference" "C2" (at 50.8 145.415 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 49.53 147.32 0)
+    (property "Value" "100nF" (at 49.53 147.32 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 47.9552 149.86 0)
@@ -4553,13 +5074,19 @@
     )
     (pin "1" (uuid d86a825f-2778-4d78-8b64-735a6ed0d37b))
     (pin "2" (uuid 56ab9fed-a553-41f0-b467-22ed96a072ea))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "C2") (unit 1) (value "100nF") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 179.07 171.45 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid dbcfa8c3-ce3d-4d9a-b328-c64936c391f6)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 179.07 177.8 0)
+    (property "Reference" "#PWR0137" (at 179.07 177.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 179.07 176.53 0)
@@ -4572,13 +5099,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e5eaf0f4-f655-4159-a759-9f967b93f0b4))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0137") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 290.83 96.52 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e0d8bf67-b983-436e-a6c5-a1637ffe2698)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 290.83 102.87 0)
+    (property "Reference" "#PWR0132" (at 290.83 102.87 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 290.83 101.6 0)
@@ -4591,16 +5124,22 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid c3eac909-6afc-460a-ae61-33b658b7b712))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0132") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:C") (at 173.99 55.88 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e4e4df6e-921b-4e7a-b5b9-7da54f3d4580)
-    (default_instance (reference "C1") (unit 1) (value "C") (footprint "Resistor_SMD:R_0603_1608Metric"))
-    (property "Reference" "C1" (at 177.8 55.245 0)
+    (property "Reference" "C6" (at 177.8 55.245 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "C" (at 177.8 57.785 0)
+    (property "Value" "10uF" (at 177.8 57.785 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 174.9552 59.69 0)
@@ -4611,12 +5150,18 @@
     )
     (pin "1" (uuid fe59c562-d7c1-415e-9a52-d1e353e473d5))
     (pin "2" (uuid 442903e2-dc63-4d04-8e69-435a8e25f689))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "C6") (unit 1) (value "10uF") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "LED:TSAL4400") (at 243.84 236.22 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e5e96850-42e0-4713-8d32-2edcf52576db)
-    (default_instance (reference "D1") (unit 1) (value "TSAL4400") (footprint "LED_THT:LED_D3.0mm_IRBlack"))
     (property "Reference" "D1" (at 246.38 236.728 90)
       (effects (font (size 1.27 1.27)) (justify right))
     )
@@ -4631,13 +5176,19 @@
     )
     (pin "1" (uuid 8778061a-9841-43a0-9c52-238be36c1154))
     (pin "2" (uuid e02c817a-80f7-4904-bddb-ad22d4665e7e))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "D1") (unit 1) (value "TSAL4400") (footprint "LED_THT:LED_D3.0mm_IRBlack")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 284.48 147.32 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e809a20f-436d-450e-8346-a559bd577241)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 284.48 153.67 0)
+    (property "Reference" "#PWR0141" (at 284.48 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 284.48 152.4 0)
@@ -4650,19 +5201,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 0d1f00ae-2592-4bb8-8658-46c7a3223ca5))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0141") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 344.17 129.54 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e9b78eb1-1032-4eea-8847-38fafd99d703)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 346.71 128.905 0)
+    (property "Reference" "R16" (at 346.71 128.905 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (at 346.71 131.445 0)
+    (property "Value" "2R" (at 346.71 131.445 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 342.392 129.54 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 342.392 129.54 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 344.17 129.54 0)
@@ -4670,13 +5227,19 @@
     )
     (pin "1" (uuid 33c56b63-8ea4-4364-b8ed-a6fd74e28e5f))
     (pin "2" (uuid 1542c155-2965-4381-82e3-0584c4ad2978))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R16") (unit 1) (value "2R") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:VBUS") (at 97.79 209.55 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f02e5029-cc87-4505-9125-0daf4903bcce)
-    (default_instance (reference "#PWR?") (unit 1) (value "VBUS") (footprint ""))
-    (property "Reference" "#PWR?" (at 97.79 213.36 0)
+    (property "Reference" "#PWR0115" (at 97.79 213.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "VBUS" (at 97.79 205.74 0)
@@ -4689,13 +5252,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 58754ab3-3558-4daf-9330-44b84eb5f264))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0115") (unit 1) (value "VBUS") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Sensor_Proximity:TSSP58038") (at 182.88 227.33 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f3125352-f1ee-4992-8467-a60b10c6f02a)
-    (default_instance (reference "U5") (unit 1) (value "TSOP93338") (footprint "OptoDevice:Vishay_MINICAST-3Pin"))
-    (property "Reference" "U5" (at 181.145 217.17 0)
+    (property "Reference" "U3" (at 181.145 217.17 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "TSOP93338" (at 181.145 219.71 0)
@@ -4710,13 +5279,19 @@
     (pin "1" (uuid b85cb997-66d9-4ba9-9d4c-68d93db5fec1))
     (pin "2" (uuid 4e3791a6-3ff0-4da1-b7d2-3989fe99b289))
     (pin "3" (uuid 3cb6bda1-a18f-4607-a622-004a35288040))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "U3") (unit 1) (value "TSOP93338") (footprint "OptoDevice:Vishay_MINICAST-3Pin")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:+3.3V") (at 33.02 115.57 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f4c1dad7-a268-434e-944a-b320143616df)
-    (default_instance (reference "#PWR?") (unit 1) (value "+3.3V") (footprint ""))
-    (property "Reference" "#PWR?" (at 33.02 119.38 0)
+    (property "Reference" "#PWR0122" (at 33.02 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (at 33.02 111.76 0)
@@ -4729,19 +5304,25 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 725b3937-c160-402e-8c64-77bdda57b945))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0122") (unit 1) (value "+3.3V") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Device:R") (at 274.32 114.3 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f63d97d4-def4-476b-a3bb-f3666bb87b82)
-    (default_instance (reference "R1") (unit 1) (value "R") (footprint ""))
-    (property "Reference" "R1" (at 274.32 111.76 90)
+    (property "Reference" "R13" (at 274.32 111.76 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "R" (at 274.32 116.84 90)
+    (property "Value" "5.1K" (at 274.32 116.84 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 274.32 112.522 90)
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 274.32 112.522 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 274.32 114.3 0)
@@ -4749,13 +5330,19 @@
     )
     (pin "1" (uuid fe472918-0f4d-4338-8329-d17ab75d08a4))
     (pin "2" (uuid 0c23322f-b447-437b-be4d-ef649679a641))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "R13") (unit 1) (value "5.1K") (footprint "Resistor_SMD:R_0603_1608Metric")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 73.66 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f66286bd-5acd-4e62-9bd3-f41ba46829e7)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 73.66 80.01 0)
+    (property "Reference" "#PWR0108" (at 73.66 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 73.66 78.74 0)
@@ -4768,13 +5355,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 4c801c3d-4ee3-409d-810c-f478532a3a7d))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0108") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "Driver_Motor:STSPIN240") (at 323.85 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f6ab4ca9-ed84-4c19-b84c-d7934688e658)
-    (default_instance (reference "U4") (unit 1) (value "STSPIN240") (footprint "Package_DFN_QFN:VQFN-16-1EP_3x3mm_P0.5mm_EP1.8x1.8mm"))
-    (property "Reference" "U4" (at 325.8059 85.09 0)
+    (property "Reference" "U5" (at 325.8059 85.09 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "STSPIN240" (at 325.8059 87.63 0)
@@ -4803,13 +5396,19 @@
     (pin "7" (uuid 29771f3b-3201-4dcb-ab6c-8873d73ffd20))
     (pin "8" (uuid 8841cbac-79c8-498b-a57d-2dd7e284392c))
     (pin "9" (uuid 513f42d8-cd79-4d5c-bd77-0659a05de44c))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "U5") (unit 1) (value "STSPIN240") (footprint "Package_DFN_QFN:VQFN-16-1EP_3x3mm_P0.5mm_EP1.8x1.8mm")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 124.46 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fc252c54-99a8-4b90-9ff2-26996932c385)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 124.46 78.74 0)
+    (property "Reference" "#PWR0119" (at 124.46 78.74 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 124.46 77.47 0)
@@ -4822,13 +5421,19 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 3a68c869-be27-42b3-890f-355942c98e02))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0119") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (symbol (lib_id "power:GND") (at 125.73 248.92 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid fd2192ad-82c9-4050-a3b7-9fedbc04fb45)
-    (default_instance (reference "#PWR?") (unit 1) (value "GND") (footprint ""))
-    (property "Reference" "#PWR?" (at 125.73 255.27 0)
+    (property "Reference" "#PWR0113" (at 125.73 255.27 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 125.73 254 0)
@@ -4841,318 +5446,16 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid abbee20b-a19a-4a54-8cf1-8bc88658b071))
+    (instances
+      (project "bbk"
+        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+          (reference "#PWR0113") (unit 1) (value "GND") (footprint "")
+        )
+      )
+    )
   )
 
   (sheet_instances
-    (path "/" (page "1"))
-  )
-
-  (symbol_instances
-    (path "/2e31160a-d59a-418f-affc-b2d3dcdcd09d"
-      (reference "#FLG0101") (unit 1) (value "PWR_FLAG") (footprint "")
-    )
-    (path "/20bc85a8-a075-413e-b373-2e3f17380382"
-      (reference "#FLG0102") (unit 1) (value "PWR_FLAG") (footprint "")
-    )
-    (path "/8023059c-ee04-4375-9793-bdcf5ec80f2f"
-      (reference "#PWR0101") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/4e2c5ee4-7aca-498a-84b3-8c4fac48f7e7"
-      (reference "#PWR0102") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/b4b7d4df-a8ef-4132-b62a-1ea318ae2f37"
-      (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/9cdf7766-978a-4fc9-a5f2-6f9a20a4202a"
-      (reference "#PWR0104") (unit 1) (value "+3.3V") (footprint "")
-    )
-    (path "/98d0510a-25d3-4e9a-941d-0b3b6dc8d50c"
-      (reference "#PWR0105") (unit 1) (value "+3.3V") (footprint "")
-    )
-    (path "/c0b9bca3-50dd-4739-becc-9403a698f574"
-      (reference "#PWR0106") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/86b9c2c8-62b4-4883-9965-72adf064c8b0"
-      (reference "#PWR0107") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/f66286bd-5acd-4e62-9bd3-f41ba46829e7"
-      (reference "#PWR0108") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/d3d15bfa-35ab-4498-8395-1426e8e53fb2"
-      (reference "#PWR0109") (unit 1) (value "VBUS") (footprint "")
-    )
-    (path "/a81d1d2c-a62d-48f4-ae8c-a99774d8cc01"
-      (reference "#PWR0110") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/4dc51034-91e2-404e-9b95-a38b6469ee51"
-      (reference "#PWR0111") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/91a3fe76-a646-4a21-b610-7ac743311c27"
-      (reference "#PWR0112") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/fd2192ad-82c9-4050-a3b7-9fedbc04fb45"
-      (reference "#PWR0113") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/253d432e-bafc-49ad-b27f-cbfd2820e2fe"
-      (reference "#PWR0114") (unit 1) (value "+3.3V") (footprint "")
-    )
-    (path "/f02e5029-cc87-4505-9125-0daf4903bcce"
-      (reference "#PWR0115") (unit 1) (value "VBUS") (footprint "")
-    )
-    (path "/8ac75545-c533-49ab-946b-3af294d9a77a"
-      (reference "#PWR0116") (unit 1) (value "VBUS") (footprint "")
-    )
-    (path "/d724f731-56e8-45c0-9e78-fbe68ed82ea6"
-      (reference "#PWR0117") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/763c6f17-c8e9-46a7-ad6d-2df104287b2e"
-      (reference "#PWR0118") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/fc252c54-99a8-4b90-9ff2-26996932c385"
-      (reference "#PWR0119") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/79ef2f58-9ad6-4ef8-b972-caabda93e44b"
-      (reference "#PWR0120") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/546fbe0b-f06a-4aeb-ad68-ff82e1275f6c"
-      (reference "#PWR0121") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/f4c1dad7-a268-434e-944a-b320143616df"
-      (reference "#PWR0122") (unit 1) (value "+3.3V") (footprint "")
-    )
-    (path "/60c60741-84c0-40a1-9b81-3da613e1a612"
-      (reference "#PWR0123") (unit 1) (value "+3.3V") (footprint "")
-    )
-    (path "/d8d9c70b-e052-488d-8443-7552b49d4e1a"
-      (reference "#PWR0124") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/8d266fb4-3eb5-4dff-9f76-3312cdb18e1e"
-      (reference "#PWR0125") (unit 1) (value "+3.3V") (footprint "")
-    )
-    (path "/24ae8984-c84b-4f9f-9969-7ac04a7ac360"
-      (reference "#PWR0126") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/c401a151-2fac-4936-b82d-938c746153fb"
-      (reference "#PWR0127") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/046cb66b-afb9-437b-87c9-71680c4260bc"
-      (reference "#PWR0128") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/7bb5f303-c52f-4e2e-ad91-f5b68a066ffd"
-      (reference "#PWR0129") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/189d7cd1-072a-46d3-8378-b1fd816b3840"
-      (reference "#PWR0130") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/c95f189c-4e0e-45a2-9af8-8e3af35b37cc"
-      (reference "#PWR0131") (unit 1) (value "+3.3V") (footprint "")
-    )
-    (path "/e0d8bf67-b983-436e-a6c5-a1637ffe2698"
-      (reference "#PWR0132") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/36618009-3fc2-40ed-a363-cd6b70b2a9fd"
-      (reference "#PWR0133") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/d5a061ce-cbba-4ed4-bb14-b8219246ce81"
-      (reference "#PWR0134") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/7bf6e0ef-fba2-4215-a233-9558b7573a20"
-      (reference "#PWR0135") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/1481b819-43e6-403f-b5ae-e3c37860020b"
-      (reference "#PWR0136") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/dbcfa8c3-ce3d-4d9a-b328-c64936c391f6"
-      (reference "#PWR0137") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/a5facc61-373b-4bf8-84d9-817546abdbcc"
-      (reference "#PWR0138") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/87889636-8015-4e19-abd9-d677a8e94dd3"
-      (reference "#PWR0139") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/d0f8fb6e-c26c-468d-a771-53795d542ca3"
-      (reference "#PWR0140") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/e809a20f-436d-450e-8346-a559bd577241"
-      (reference "#PWR0141") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/3972c683-7012-463c-9047-7f6e98e7c226"
-      (reference "#PWR0142") (unit 1) (value "VBUS") (footprint "")
-    )
-    (path "/04b99168-74b3-451b-8d31-b9c942b90766"
-      (reference "#PWR0143") (unit 1) (value "+3.3V") (footprint "")
-    )
-    (path "/c905b1b3-fb94-42b1-922e-3e0ec384c766"
-      (reference "#PWR0144") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/c9ea412c-1b31-4c26-9a52-90e8ccc24b5e"
-      (reference "#PWR0145") (unit 1) (value "+3.3V") (footprint "")
-    )
-    (path "/7f35f5da-4ee5-4640-9507-04b0bdaf037d"
-      (reference "#PWR0146") (unit 1) (value "+3.3V") (footprint "")
-    )
-    (path "/1e586c96-8f87-44e1-85fb-faa132d13260"
-      (reference "C1") (unit 1) (value "10uF") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/d948c0ae-f0dc-4217-bee9-c79bf60f10ac"
-      (reference "C2") (unit 1) (value "100nF") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/c7abfe31-776f-46e9-bae7-482965e7b12b"
-      (reference "C3") (unit 1) (value "10uF") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/224e0f84-0df8-4d4b-87a9-17c1968ca00b"
-      (reference "C4") (unit 1) (value "10uF") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/a3ef4cae-cd74-477a-b779-80c06764e0f7"
-      (reference "C5") (unit 1) (value "100nF") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/e4e4df6e-921b-4e7a-b5b9-7da54f3d4580"
-      (reference "C6") (unit 1) (value "10uF") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/7b61ec58-5c1e-4895-876b-fbf3cba06804"
-      (reference "C7") (unit 1) (value "100nF") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/5beabab7-40e3-4298-85e3-cd405fb7bde1"
-      (reference "C8") (unit 1) (value "10uF") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/68710d98-c051-461a-b101-b708f727d0c2"
-      (reference "C9") (unit 1) (value "10uF") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/d1305bd3-a1b2-4efa-880f-68c3c4401219"
-      (reference "C10") (unit 1) (value "100nF") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/17bd00b7-444c-48e6-ae0f-4ee88bfddd1c"
-      (reference "C11") (unit 1) (value "22uF") (footprint "Capacitor_SMD:CP_Elec_4x4.5")
-    )
-    (path "/22ce2581-3e36-441f-b587-7e438d9ee469"
-      (reference "C12") (unit 1) (value "22nF") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/e5e96850-42e0-4713-8d32-2edcf52576db"
-      (reference "D1") (unit 1) (value "TSAL4400") (footprint "LED_THT:LED_D3.0mm_IRBlack")
-    )
-    (path "/96c85616-738c-4834-9200-daac9f1da1d9"
-      (reference "F1") (unit 1) (value "Polyfuse") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/25997b4f-42ff-476a-b127-d1b06e4ab0a0"
-      (reference "FB1") (unit 1) (value "FerriteBead") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/cfe1167e-3b92-44a3-805c-68d4d975320a"
-      (reference "H1") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.2mm_M2")
-    )
-    (path "/2d40d95c-ea04-40e1-af72-2bdbdb86a5c6"
-      (reference "H2") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.2mm_M2")
-    )
-    (path "/d3c6e73b-0e30-42bb-b5be-2ffa30e33c0a"
-      (reference "H3") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.2mm_M2")
-    )
-    (path "/476bbc40-22e9-407c-8ace-be05ea768e1d"
-      (reference "H4") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.2mm_M2")
-    )
-    (path "/d5976fff-85d0-4726-89d9-ad6738999b3f"
-      (reference "J1") (unit 1) (value "USB_C_Receptacle_USB2.0") (footprint "#bbk:USB_C_Receptacle_JAE_DX07S016JA3R1500")
-    )
-    (path "/417e5e57-f99b-4c79-9957-26594fdf8c17"
-      (reference "J2") (unit 1) (value "Neopixel") (footprint "Connector_JST:JST_SH_BM03B-SRSS-TB_1x03-1MP_P1.00mm_Vertical")
-    )
-    (path "/03b73d21-973e-4edb-875f-12d5123cbb36"
-      (reference "J3") (unit 1) (value "ExtPower") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
-    )
-    (path "/4b48ef62-7de2-4c4a-9b86-a718f441caed"
-      (reference "J4") (unit 1) (value "TagConnect") (footprint "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical")
-    )
-    (path "/18bdd46d-b182-415c-b46d-6d0c79a961de"
-      (reference "J5") (unit 1) (value "Li-Ion") (footprint "Connector_JST:JST_SH_BM03B-SRSS-TB_1x03-1MP_P1.00mm_Vertical")
-    )
-    (path "/adc405a2-c487-403c-87bb-318a28731c71"
-      (reference "J6") (unit 1) (value "I2C") (footprint "Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical")
-    )
-    (path "/c46ac2fe-02a4-4a2c-bf07-01dc042aa06e"
-      (reference "J7") (unit 1) (value "Motors") (footprint "Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical")
-    )
-    (path "/9c8522b3-2eb6-4e97-a0b8-5d30f59d9432"
-      (reference "Q1") (unit 1) (value "PMV15ENEA") (footprint "Package_TO_SOT_SMD:SOT-23")
-    )
-    (path "/8575fc95-4889-4a7b-b7f3-ae046cf68612"
-      (reference "R1") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/8db269e9-5f11-4e0c-b784-f132a78a8fa7"
-      (reference "R2") (unit 1) (value "190R") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/959025be-52bd-4cd2-b97a-e427116fed87"
-      (reference "R3") (unit 1) (value "5.1K") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/6942161d-83f6-4a72-a9d5-f60c3909b111"
-      (reference "R4") (unit 1) (value "5.1K") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/88768193-c9f4-4e3f-abb4-aa524bf2805a"
-      (reference "R5") (unit 1) (value "190R") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/32e32662-1b56-4ee3-a9c2-8ad58104025d"
-      (reference "R6") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/859f045c-5b2a-4f54-9370-52fc40805679"
-      (reference "R7") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/c70eeab8-b26a-4b6b-85a6-6e2128ec11fb"
-      (reference "R8") (unit 1) (value "20K") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/003b17b1-786f-4e88-8c9b-e617da0c101e"
-      (reference "R9") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/9ba8f81e-e645-4d1a-85c6-ab9af53f39ab"
-      (reference "R10") (unit 1) (value "190R") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/7b0e3bbd-e805-4f5d-aaca-48d3969588e1"
-      (reference "R11") (unit 1) (value "330R") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/84d1340a-e41e-4f5a-a14c-ad71cf9ebbdc"
-      (reference "R12") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/f63d97d4-def4-476b-a3bb-f3666bb87b82"
-      (reference "R13") (unit 1) (value "5.1K") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/958140c0-51c4-4351-8185-12f4b0b0c0fd"
-      (reference "R14") (unit 1) (value "47K") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/a3f2c5e6-2b6b-42a2-98f1-da9e083669bf"
-      (reference "R15") (unit 1) (value "1K") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/e9b78eb1-1032-4eea-8847-38fafd99d703"
-      (reference "R16") (unit 1) (value "2R") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/7100ab61-0744-4978-b311-92e1e9166022"
-      (reference "R17") (unit 1) (value "2R") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/77bf8f1e-5346-4fe4-bbb7-683dbb64498b"
-      (reference "R18") (unit 1) (value "5.1K") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/a97d24e7-3cff-4317-8a9c-c83f3397bab0"
-      (reference "R19") (unit 1) (value "5.1K") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/c6a71a09-71eb-462d-8989-417c0387783b"
-      (reference "R20") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/775d766e-bee5-44c7-8d37-e3cb716e97a1"
-      (reference "SW1") (unit 1) (value "Reset") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
-    )
-    (path "/615cd08e-8eb0-4527-b2a7-410bbc600c74"
-      (reference "SW2") (unit 1) (value "Wakeup") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
-    )
-    (path "/89e6b0bb-5792-43b5-a615-3490412f8fbc"
-      (reference "U1") (unit 1) (value "STM32G0xxFx") (footprint "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm")
-    )
-    (path "/56a438f8-2e01-4183-a652-5e06ef18f630"
-      (reference "U2") (unit 1) (value "MP2667GG-xxxx-Z") (footprint "#bbk:MP2667GG-xxxx-Z")
-    )
-    (path "/f3125352-f1ee-4992-8467-a60b10c6f02a"
-      (reference "U3") (unit 1) (value "TSOP93338") (footprint "OptoDevice:Vishay_MINICAST-3Pin")
-    )
-    (path "/cd0f24ae-094e-4888-8e16-91cb09b05014"
-      (reference "U4") (unit 1) (value "AP7370-33W5-7") (footprint "Package_TO_SOT_SMD:TSOT-23-5")
-    )
-    (path "/f6ab4ca9-ed84-4c19-b84c-d7934688e658"
-      (reference "U5") (unit 1) (value "STSPIN240") (footprint "Package_DFN_QFN:VQFN-16-1EP_3x3mm_P0.5mm_EP1.8x1.8mm")
-    )
+    (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55" (page "1"))
   )
 )
