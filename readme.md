@@ -1,6 +1,6 @@
 # bbk
 
-Tiny printable robot platform.
+🚜 Tiny printable robot platform
 
 ## License
 

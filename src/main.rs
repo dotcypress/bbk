@@ -139,13 +139,21 @@ mod curio {
         ir.lock(|ir| ir.tick());
     }
 
-    #[task(binds = EXTI4_15, shared = [ir, exti])]
+    #[task(binds = EXTI4_15, shared = [ir, exti, esc])]
     fn ir_rx(ctx: ir_rx::Context) {
         let mut exti = ctx.shared.exti;
         let mut ir = ctx.shared.ir;
+        let mut esc = ctx.shared.esc;
         exti.lock(|exti| exti.unpend(hal::exti::Event::GPIO15));
         if let Ok(Some(cmd)) = ir.lock(|ir| ir.event()) {
-            defmt::info!("ir: {:?}", cmd);
+            defmt::info!("ir: {}", cmd.cmd);
+            let speed = match cmd.cmd {
+                12 => 32,
+                24 => 64,
+                94 => 127,
+                _ => 0,
+            };
+            esc.lock(|esc| esc.set_speed(speed, speed))
         }
     }
 }
